@@ -1,9 +1,8 @@
 
 FROM hypriot/rpi-alpine:3.6
-ENV FRP_VERSION 2.0.0
+ENV Traefik_VERSION 1.7.9
 
-ADD https://github.com/containous/traefik/releases/download/v2.0.0-alpha2/traefik_v2.0.0-alpha2_linux_armv7.tar.gz
-ADD https://github.com/containous/traefik/releases/download/v1.3.8/traefik_linux-arm /traefik
+ADD https://github.com/containous/traefik/releases/download/vTraefik_VERSION/traefik_linux-arm /traefik
 RUN apk upgrade --no-cache &&\
     apk add --no-cache ca-certificates &&\
     chmod +x /traefik
