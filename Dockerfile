@@ -1,4 +1,5 @@
-FROM hypriot/rpi-alpine:3.6
+#FROM hypriot/rpi-alpine:3.6
+FROM resin/rpi-raspbian:$distro
 ENV Traefik_VERSION 2.0.0-alpha2
 RUN apk update && apk add wget curl
 ADD https://github.com/containous/traefik/releases/download/v$Traefik_VERSION/traefik_v${Traefik_VERSION}_linux_armv7.tar.gz /var/traefik/traefik_v${Traefik_VERSION}_linux_armv7.tar.gz  
