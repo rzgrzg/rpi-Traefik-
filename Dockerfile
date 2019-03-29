@@ -6,4 +6,4 @@ RUN tar -zxf /var/traefik/traefik_v${Traefik_VERSION}_linux_armv7.tar.gz traefik
 RUN chmod +x /traefik
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 EXPOSE 80 8080 443
-ENTRYPOINT ["/traefik"]
+CMD ["/traefik"]
